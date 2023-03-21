@@ -8,6 +8,30 @@
 '''
 from tkinter import *
 
+# Caesar cipher function
+def caesar_cipher(text, shift):
+    cipher_text = ""
+    for char in text:
+        if char.isalpha():
+            # Shift the letter by the given amount
+            new_char_code = ord(char) + shift
+            if char.isupper():
+                if new_char_code > ord('Z'):
+                    new_char_code -= 26
+                elif new_char_code < ord('A'):
+                    new_char_code += 26
+            elif char.islower():
+                if new_char_code > ord('z'):
+                    new_char_code -= 26
+                elif new_char_code < ord('a'):
+                    new_char_code += 26
+            # Append the shifted letter to the cipher text
+            cipher_text += chr(new_char_code)
+        else:
+            # Append non-alphabetic characters as-is
+            cipher_text += char
+    return cipher_text
+
 # GUI setup
 root = Tk()
 root.title("Hello World")
