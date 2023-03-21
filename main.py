@@ -55,6 +55,14 @@ output_label.pack()
 output_text = Text(root, width=40, height=4)
 output_text.pack()
 
+# Encrypt Function
+def encrypt():
+    text = text_box.get()
+    shift = int(shift_box.get())
+    cipher_text = caesar_cipher(text, shift)
+    output_text.delete('1.0', END)  # clear previous output
+    output_text.insert(END, cipher_text)
+
 #Encrypt Button
 encrypt_button = Button(root)
 encrypt_button.pack()
