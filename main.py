@@ -12,3 +12,9 @@ from tkinter import *
 root = Tk()
 root.title("Hello World")
 root.geometry("300x250")
+
+# Text input box
+text_label = Label(root, text="Enter text to encrypt:")
+text_label.pack()
+text_box = Entry(root, width=40)
+text_box.pack()
