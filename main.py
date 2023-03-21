@@ -24,3 +24,9 @@ shift_label = Label(root, text="Enter shift amount (0-25):")
 shift_label.pack()
 shift_box = Entry(root, width=20)
 shift_box.pack()
+
+# Output label
+output_label = Label(root, text="Encrypted text:")
+output_label.pack()
+output_text = Text(root, width=40, height=4)
+output_text.pack()
