@@ -30,3 +30,11 @@ output_label = Label(root, text="Encrypted text:")
 output_label.pack()
 output_text = Text(root, width=40, height=4)
 output_text.pack()
+
+#Encrypt Button
+encrypt_button = Button(root)
+encrypt_button.pack()
+
+
+
+root.mainloop()
