@@ -64,7 +64,7 @@ def encrypt():
     output_text.insert(END, cipher_text)
 
 #Encrypt Button
-encrypt_button = Button(root, text="Encrypt", command=encrypt, bg='red', fg='white', activebackground='crimson')
+encrypt_button = Button(root, text="Encrypt", command=encrypt, bg='#ff0000', fg='white', activebackground='#db0000', activeforeground= 'white')
 encrypt_button.pack()
 
 
