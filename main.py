@@ -44,10 +44,12 @@ text_box = Entry(root, width=40)
 text_box.pack()
 
 # Shift input box
-shift_label = Label(root, text="Enter shift amount (0-25):")
+shift_label = Label(root, text="Select shift amount:")
 shift_label.pack()
-shift_box = Entry(root, width=20)
-shift_box.pack()
+shift_var = IntVar()
+shift_dropdown = OptionMenu(root, shift_var, *[i for i in range(26)])
+shift_dropdown.pack()
+shift_dropdown.config(width=20)
 
 # Output label
 output_label = Label(root, text="Encrypted text:")
@@ -64,7 +66,7 @@ def encrypt():
     output_text.insert(END, cipher_text)
 
 #Encrypt Button
-encrypt_button = Button(root, text="Encrypt", command=encrypt, bg='#ff0000', fg='white', activebackground='#db0000', activeforeground= 'white')
+encrypt_button = Button(root, text="Encrypt", command=encrypt, bg='#ff0000', fg='#ffffff', activebackground='#db0000', activeforeground= '#d4d4d4')
 encrypt_button.pack()
 
 
